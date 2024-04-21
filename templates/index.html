@@ -108,9 +108,10 @@
           <div
             class="col-4 friends-list-container vstack gap-3 py-2 scrollable-column"
           >
-            {% if friends %} {% for friend in friends %} {% for profile in
-            user_profiles %} {% if profile.user == friend.friend %} {% if
-            profile.profile_picture %}
+            {% if friends %} {% for friend in friends %}
+            {% for profile in user_profiles %}
+             {% if profile.user == friend.friend %}
+             {% if profile.profile_picture %}
             <div
               class="user-container border border-dark rounded-4 ps-1 py-2 hstack gap-2 d-flex align-items-center"
             >
@@ -148,7 +149,11 @@
                 </a>
               </h5>
             </div>
-            {% endif %} {% endif %} {% endfor %} {% endfor %} {% else %}
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+            {% endfor %}
+            {% else %}
             <h5 id="make-friends">Make friends to chat with</h5>
             {% endif %}
           </div>
