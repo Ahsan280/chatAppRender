@@ -67,7 +67,7 @@ const sendToWebsocket = function () {
 const connectToWebsocket = function (person_id) {
   const currentUrl = window.location.href;
   console.log(currentUrl);
-  const url = `${currentUrl}${person_id}/`;
+  const url = `wss//chatapprender.onrender.com/${person_id}/`;
   chat_websocket = new WebSocket(url);
   chat_websocket.onopen = function () {
     chat_websocket.send(`{"type":"entered_chat"}`);
